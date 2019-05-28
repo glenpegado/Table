@@ -16,9 +16,15 @@ let personData = [
         name: 'Dylan',
         age: 34
     },
+    {
+        name: 'Marie',
+        age: 23
+    },
 ]
 
-loadTableData(personData)
+window.onload = () => {
+    loadTableData(personData)
+}
 
 function loadTableData(personData){
     const tableBody = document.getElementById('tableData')
@@ -30,5 +36,5 @@ function loadTableData(personData){
     }
     console.log(dataHtml)
 
-    tableBody.innerHtml = dataHtml
+    tableBody.innerHTML = dataHtml
 }
